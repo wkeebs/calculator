@@ -9,13 +9,33 @@
   <body>
     <div class="container">
       <div class="calculator">
-        <div class="screen"></div>
-        <div class="clear-delete-container">
-            <button class="clear">CLEAR</button>
-            <button class="delete">DELETE</button>
+        <div class="screen">
+            <div data-previous-operand class="previous"></div>
+            <div data-current-operand class="current"></div>
         </div>
-        <div class="buttons-container"></div>
-    </div>
+        <div class="clear-delete-container">
+          <button data-all-clear class="clear">CLEAR</button>
+          <button data-delete class="delete">DELETE</button>
+        </div>
+        <div class="buttons-container">
+          <button data-number id="btn-7" class="small-btn">7</button>
+          <button data-number id="btn-8" class="small-btn">8</button>
+          <button data-number id="btn-9" class="small-btn">9</button>
+          <button data-operation id="btn-divide" class="small-btn">÷</button>
+          <button data-number id="btn-4" class="small-btn">4</button>
+          <button data-number id="btn-5" class="small-btn">5</button>
+          <button data-number id="btn-6" class="small-btn">6</button>
+          <button data-operation id="btn-times" class="small-btn">*</button>
+          <button data-number id="btn-1" class="small-btn">1</button>
+          <button data-number id="btn-2" class="small-btn">2</button>
+          <button data-number id="btn-3" class="small-btn">3</button>
+          <button data-operation id="btn-minus" class="small-btn">-</button>
+          <button data-operation id="btn-decimal" class="small-btn">.</button>
+          <button data-number id="btn-0" class="small-btn">0</button>
+          <button data-operation id="btn-equals" class="small-btn">=</button>
+          <button data-equals id="btn-plus" class="small-btn">+</button>
+        </div>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>

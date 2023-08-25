@@ -44,6 +44,10 @@ body {
   border-color: var(--rich-black);
   border: solid;
   border-width: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-around;
 }
 
 .clear-delete-container {
@@ -80,4 +84,15 @@ body {
   height: 100px;
   background-color: var(--light-cyan);
   border-radius: 10px;
+}
+
+.previous {
+    font-size: 2rem;
+    opacity: 80%;
+    margin: 15px;
+}
+
+.current {
+    font-size: 2.5rem;
+    margin: 15px;
 }
