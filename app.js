@@ -112,17 +112,6 @@ operators.forEach((button) => {
     const previousKeyType = calculator.dataset.previousKeyType;
     const keyContent = button.textContent;
 
-    // Display the operator.
-    if (
-      displayedNum === "0" ||
-      previousKeyType === "operator" ||
-      previousKeyType === "calculate"
-    ) {
-      display.textContent = keyContent;
-    } else {
-      display.textContent = displayedNum + keyContent;
-    }
-
     switch (action) {
       case "decimal":
         displayDecimal();
@@ -142,11 +131,11 @@ operators.forEach((button) => {
         break;
       case "clear":
         clear(button);
-        calculator.dataset.previousKey = "clear";
+        calculator.dataset.previousKeyType = "clear";
         break;
       case "delete":
         displayDelete();
-        calculator.dataset.previousKey = "delete";
+        calculator.dataset.previousKeyType = "delete";
         break;
       case "calculate":
         let firstValue = calculator.dataset.firstValue;
