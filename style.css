@@ -58,7 +58,7 @@ body {
 
 .buttons-container {
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(4, auto);
   margin: 20px;
   gap: 10px;
@@ -78,10 +78,6 @@ body {
   background-color: var(--non-photo-blue);
 }
 
-.key--equal {
-  background-color: var(--honolulu-blue);
-}
-
 .display {
   font-size: 2.5rem;
   margin: 15px;
@@ -94,6 +90,10 @@ body {
   border-radius: 10px;
 }
 
+.equals {
+  background-color: orange;
+}
+
 .clear {
   background-color: var(--non-photo-blue);
 }
@@ -101,6 +101,11 @@ body {
 .delete {
   background-color: var(--honolulu-blue);
 }
+
+.decimal {
+  background-color: var(--light-cyan);
+}
+
 
 .is-depressed {
   background-color: rgb(123, 171, 203);
