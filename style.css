@@ -6,14 +6,24 @@
   --non-photo-blue: #90e0efff;
   --light-cyan: #caf0f8ff;
 
-  background-color: var(--federal-blue);
+  background-color: #e5e5f7;
+  background-image: linear-gradient(#444cf7 2px, transparent 2px),
+    linear-gradient(90deg, #444cf7 2px, transparent 2px),
+    linear-gradient(#444cf7 1px, transparent 1px),
+    linear-gradient(90deg, #444cf7 1px, #e5e5f7 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  position: fixed;
 }
 
 * {
   font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -22,12 +32,46 @@ body {
   justify-content: center;
 }
 
+footer {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  background-color: whitesmoke;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+  color: var(--honolulu-blue);
+}
+
+.title {
+  font-size: 3rem;
+  font-style: italic;
+  background-color: var(--non-photo-blue);
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px var(--federal-blue);
+  text-shadow: 1px 2px var(--federal-blue);
+  font-weight: 700;
+  color: whitesmoke;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--honolulu-blue);
   border-radius: 20px;
+  margin-bottom: 5em;
 }
 
 .calculator {
@@ -105,7 +149,6 @@ body {
 .decimal {
   background-color: var(--light-cyan);
 }
-
 
 .is-depressed {
   background-color: rgb(123, 171, 203);
