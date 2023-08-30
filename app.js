@@ -20,12 +20,11 @@ function displayNum(keyContent) {
   const displayedNum = display.innerText;
   if (
     displayedNum === "0" ||
-    previousKeyType === "operator" ||
-    previousKeyType === "calculate"
+    calculator.dataset.previousKeyType === "operator"
   ) {
     display.textContent = keyContent;
   } else {
-    display.textContent = displayedNum + keyContent;
+    display.textContent = display.textContent + keyContent;
   }
 }
 
@@ -113,6 +112,7 @@ operators.forEach((button) => {
     const previousKeyType = calculator.dataset.previousKeyType;
     const keyContent = button.textContent;
 
+    // Display the operator.
     if (
       displayedNum === "0" ||
       previousKeyType === "operator" ||
@@ -158,7 +158,6 @@ operators.forEach((button) => {
             firstValue = displayedNum;
             secondValue = calculator.dataset.modValue;
           }
-
           display.textContent = calculate(firstValue, operator, secondValue);
         }
 
